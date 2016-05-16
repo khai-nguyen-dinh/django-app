@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'note.apps.NoteConfig',
     'vi.apps.ViConfig',
     'django.contrib.admin',
     'django.contrib.auth',
