@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chinh sua</title>
+</head>
+<body>
+
+<form action="/note/edit/" method="post">
+    <table border="1">
+        <tr>
+            <td>title:</td>
+            <td><input type="text" value="{{ post.title }}" name="title"/></td>
+        </tr>
+        <tr>
+            <td>content:</td>
+            <td><input type="text" value="{{ post.content }}" name="content"/></td>
+        </tr>
+        <tr>
+            <td><input type="hidden" value="{{ post.id }}" name="id"/></td>
+        </tr>
+            <input type="submit" value="enter">
+    </table>
+</form>
+
+</body>
+</html>

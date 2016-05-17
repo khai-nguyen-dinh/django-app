@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hien thi</title>
+</head>
+<body>
+<form action="/note/main/" method="post">
+    <table border="1">
+        <tr>
+            <td>title:</td>
+            <td><input type="text" name="title"/></td>
+        </tr>
+        <tr>
+            <td>content:</td>
+            <td><input type="text" name="content"/></td>
+        </tr>
+        <tr>
+            <input type="submit" value="enter">
+        </tr>
+    </table>
+</form>
+<h2>list post:</h2>
+<table border="1">
+    {% for x in post %}
+        <tr>
+            <td>{{ x.title }}</td>
+            <td>{{ x.content }}</td>
+            <td><a href="/note/edit?id={{ x.id }}">edit</a></td>
+            <td><a href="/note/delete?id={{ x.id }}">delete</a></td>
+        </tr>
+    {% endfor %}
+</table>
+<form action="/note/logout/">
+    <input type="submit" name="login" value="dang xuat"/>
+</form>
+</body>
+</html>
