@@ -1,4 +1,4 @@
-"""wiki URL Configuration
+"""restfll URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.9/topics/http/urls/
@@ -17,8 +17,6 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^note/api', include('note.api.urls',namespace="list_api")),
-    url(r'^note/', include('note.urls')),
-    url(r'^vi/', include('vi.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^rest/',include('rest.api.urls',namespace='rest_api')),
 ]
